@@ -1,0 +1,29 @@
+{
+  "end_point" : "monitor",
+  "links" :
+  {
+    "/input" :
+    {
+      "links" : {},
+      "type": "STREAM"
+    }
+  },
+  "requests" : [{"link": "plant/state", "required": false, "type": "STREAM"}]
+}
+
+
+{
+    'end_point': end_point,
+    'links':
+    {
+        '/1': {'type': 'STREAM'},
+    },
+    'requests':
+    [
+        {
+            'link': 'matlab_api/'+end_point,
+            'type': 'STREAM',
+            'required': False
+        },
+    ]
+}
